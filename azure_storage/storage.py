@@ -110,7 +110,8 @@ class AzureStorage(Storage):
                                      cache_control=cache_control,
                                      x_ms_blob_cache_control=cache_control)
 
-        content.close()
+        # breaks other saving parts coming after it
+        # content.close()
 
         return name
 
