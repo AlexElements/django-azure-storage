@@ -29,3 +29,6 @@ htmlcov
 
 # Translations
 *.mo
+
+# IDE
+.idea

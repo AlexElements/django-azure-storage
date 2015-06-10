@@ -104,8 +104,8 @@ class AzureStorage(Storage):
         cache_control = self.get_cache_control(self.container, name,
                                                content_type)
 
-        self._get_service().put_blob(self.container, name, content_str,
-                                     x_ms_blob_type="BlockBlob",
+        self._get_service().put_block_blob_from_bytes(self.container, name, content_str,
+                                     # x_ms_blob_type="BlockBlob",
                                      x_ms_blob_content_type=content_type,
                                      cache_control=cache_control,
                                      x_ms_blob_cache_control=cache_control)
